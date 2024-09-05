@@ -6,11 +6,11 @@ export const fetchGhibliMovies = async () => {
   const endpoint = "/films";
   const url = GHIBLI_API_URL + endpoint;
   try {
-    const res = axios.get(url);
-    if (!res.ok) {
+    const res = await axios.get('https://ghibliapi.vercel.app/films');
+    if (!res.data) {
       throw new Error(`Error with status ${res.status}`);
     }
-    const ghibliMovieData = res.json();
+    const ghibliMovieData =  res.data;
     return ghibliMovieData;
   } catch (error) {
     console.log("Error fetching Ghibli Movie data", error);
