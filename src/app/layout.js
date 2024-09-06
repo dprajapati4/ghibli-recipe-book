@@ -3,9 +3,9 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Caveat, Josefin_Sans, Amatic_SC } from "next/font/google";
 
-const amaticSC = Amatic_SC({ subsets: ["latin"], weight: "400" });
+export const amaticSC = Amatic_SC({ subsets: ["latin"], weight: "400" });
 const caveat = Caveat({ subsets: ["latin"], weight: "400" });
-const josefinSans = Josefin_Sans({ subsets: ["latin"], weight: "400" });
+export const josefinSans = Josefin_Sans({ subsets: ["latin"], weight: "400" });
 
 const GlobalStyle = createGlobalStyle`
   * {
