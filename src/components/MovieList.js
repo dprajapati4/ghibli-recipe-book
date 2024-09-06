@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { fetchGhibliMovies } from "@/utils/api";
+import Link from "next/link";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { fetchGhibliMovies } from "@/utils/api";
 import { josefinSans, amaticSC } from "@/app/layout";
-import { motion } from "framer-motion"; // For animations
 
 const ListContainer = styled.div`
   display: flex;
@@ -42,11 +43,6 @@ const MovieTitle = styled.h3`
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
-const MovieDescription = styled.p`
-  padding: 0 10px 15px 10px;
-  color: #777;
-  font-size: 0.9rem;
-`;
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -67,18 +63,23 @@ const MovieList = () => {
 
     getMovies();
   }, []);
+// TODO: Make a cute loading spinner and error
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   if (!movies.length) {
-    return <p>{error}</p>;
+    return <p>Loading Movies.....</p>;
   }
   return (
     <ListContainer>
       {movies.map((movie) => (
-        <MovieCard key={movie.id}>
-          <MovieImage src={movie.image} alt={movie.title} />
-          <MovieTitle>{movie.title}</MovieTitle>
-          <MovieDescription>{movie.description}</MovieDescription>
-        </MovieCard>
+        <Link key={movie.id} href={`/movie/${movie.id}`}>
+          <MovieCard>
+            <MovieImage src={movie.image} alt={movie.title} />
+            <MovieTitle>{movie.title}</MovieTitle>
+          </MovieCard>
+        </Link>
       ))}
     </ListContainer>
   );

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { fetchGhibliMovieById } from "@/utils/api";
+import MovieDetails from "@/components/MovieDetails";
 
-const MovieDetails = ({ params }) => {
+const MoviePage = ({ params }) => {
   const { id } = params;
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
@@ -30,14 +30,9 @@ const MovieDetails = ({ params }) => {
   if (!movie) {
     return <p>Loading Movie Data.....</p>;
   }
-  console.log("The movie", movie);
   return (
-    <div>
-      <h1>
-        Movie Details for {movie.title} {id}
-      </h1>
-    </div>
+    <MovieDetails movie={movie} />
   );
 };
 
-export default MovieDetails;
+export default MoviePage;
