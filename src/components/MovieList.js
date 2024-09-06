@@ -8,19 +8,20 @@ const ListContainer = styled.div`
   flex-wrap: wrap;
   gap: 25px;
   padding: 30px;
-  background-color: #f0f0f0; /* Light grey background for the list */
 `;
 
 const MovieCard = styled.div`
-  background: white;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 250px;
   text-align: center;
   font-family: ${josefinSans.style.fontFamily}, cursive;
+  transition: transform 0.3s ease;
+
   &:hover {
-    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -32,11 +33,13 @@ const MovieImage = styled.img`
 const MovieTitle = styled.h3`
   color: #333;
   margin: 10px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 `;
 
 const MovieDescription = styled.p`
-  padding: 0 10px;
+  padding: 0 10px 15px 10px;
   color: #555;
+  font-size: 0.9rem;
 `;
 
 const MovieList = () => {

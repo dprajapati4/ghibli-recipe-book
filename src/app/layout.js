@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${josefinSans.style.fontFamily}, cursive;
-    background-color: #f5f5f5; /* Light, soft background for Ghibli aesthetic */
+    background: linear-gradient(135deg, #e0f7fa, #b9fbc0); 
     color: #333;
   }
 
@@ -35,11 +35,14 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
 const Header = styled.header`
-  background-color: #8bc34a;
+  background: #a5d6a7;
   padding: 20px;
   text-align: center;
   font-size: 2.5rem;
@@ -48,12 +51,12 @@ const Header = styled.header`
 `;
 
 const Footer = styled.footer`
-  background-color: #8bc34a;
+  background: #a5d6a7;
   text-align: center;
   padding: 16px;
   font-size: 1rem;
   color: white;
-  font-family: "Caveat", cursive;
+  font-family: ${amaticSC.style.fontFamily}, cursive;
 `;
 const metadata = {
   title: "Ghibli Recipe Book",
