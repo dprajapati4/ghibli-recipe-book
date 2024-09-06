@@ -22,7 +22,9 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3 {
     font-family: ${amaticSC.style.fontFamily}, cursive;
-    color: #333;
+    color: #222;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
   }
 
   a {
