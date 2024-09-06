@@ -23,12 +23,18 @@ const MovieList = () => {
 
   if (!movies.length) {
     return <p>Error</p>;
-  }
-
-  return (
+  }  return (
     <ul>
       {movies.map((movie) => (
-        <li key={movie.id}>{movie.title}</li>
+        <li key={movie.id}>
+          {/* <p>{movie.title}</p> */}
+          <img
+            src={movie.image}
+            alt={movie.title}
+            height={"250px"}
+            width={"auto"}
+          />
+        </li>
       ))}
     </ul>
   );
