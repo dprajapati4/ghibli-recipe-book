@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import styled, { createGlobalStyle } from "styled-components";
 import { Caveat, Josefin_Sans, Amatic_SC } from "next/font/google";
 
@@ -59,6 +60,7 @@ const Footer = styled.footer`
   font-size: 1rem;
   color: white;
   font-family: ${amaticSC.style.fontFamily}, cursive;
+  bottom: 5px;
 `;
 const metadata = {
   title: "Ghibli Recipe Book",
@@ -70,7 +72,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GlobalStyle />
       <body>
-        <Header>Ghibli Recipe Book</Header>
+        <Link href={`/`}>
+          <Header>Ghibli Inspired Recipe Book</Header>
+        </Link>
         <Container>{children}</Container>
         <Footer>
           © 2024 Ghibli Movies Inspired Recipes - All rights reserved
