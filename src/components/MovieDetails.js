@@ -32,14 +32,17 @@ const MovieDetailsContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
+  flex-wrap: wrap;
+  max-width: fit-content;
 `;
 const MovieDetailsImage = styled.img`
   width: 100%;
   max-width: 300px;
   height: auto;
   border-radius: 12px;
-  margin-right: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const MovieDescription = styled.p`
@@ -47,7 +50,7 @@ const MovieDescription = styled.p`
   font-size: 1rem;
   line-height: 1.6;
   padding: 0;
-  max-width: 450px;
+  max-width: 350px;
 `;
 
 const MovieDetails = ({ movie }) => {

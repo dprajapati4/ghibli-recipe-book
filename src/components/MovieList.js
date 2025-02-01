@@ -9,6 +9,8 @@ const ListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
+  justify-content: center;
+  align-items: center;
   padding: 30px;
   background: #f5f5f5;
   border-radius: 12px;
