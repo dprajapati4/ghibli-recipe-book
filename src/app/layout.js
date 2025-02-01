@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+  
+  button {
+    font-family: ${josefinSans.style.fontFamily}, cursive;
+}
 `;
 
 // Styled-components for layout elements
