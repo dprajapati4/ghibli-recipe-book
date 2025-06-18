@@ -33,8 +33,8 @@ const MoviePage = ({ params }) => {
   }
   return (
     <>
-      <MovieDetails movie={movie} />
       <BackButton url={'/'} />
+      <MovieDetails movie={movie} />
     </>
   );
 };

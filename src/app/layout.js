@@ -10,61 +10,95 @@ export const josefinSans = Josefin_Sans({ subsets: ["latin"], weight: "400" });
 
 const GlobalStyle = createGlobalStyle`
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+  }
+  html, body {
+  min-height: 100%;
+  width:100%
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   }
 
   body {
-    font-family: ${josefinSans.style.fontFamily}, cursive;
+    font-family: ${josefinSans.style.fontFamily};
     background: linear-gradient(135deg, #e0f7fa, #b9fbc0); 
     color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
   }
 
   h1, h2, h3 {
-    font-family: ${amaticSC.style.fontFamily}, cursive;
+    font-family: ${amaticSC.style.fontFamily};
     color: #222;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-
+    line-height: 1.2;
+    letter-spacing: 1px;
   }
 
   a {
     text-decoration: none;
     color: inherit;
   }
-  
+
   button {
-    font-family: ${josefinSans.style.fontFamily}, cursive;
-}
+    font-family: inherit;
+  }
+
+  main {
+    flex: 1;
+  }
 `;
 
-// Styled-components for layout elements
-const Container = styled.div`
+// Layout Components
+const Container = styled.main`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px;
+  }
 `;
 
 const Header = styled.header`
   background: #a5d6a7;
-  padding: 20px;
-  text-align: center;
+  padding: 1rem;
   font-size: 2.5rem;
-  font-family: ${amaticSC.style.fontFamily}, cursive;
+  text-align: center;
+  font-family: ${amaticSC.style.fontFamily};
   color: white;
+
+  a {
+    display: inline-block;
+    width: 100%;
+    transition: background 0.3s;
+  }
+
+  &:hover {
+    background: #81c784;
+  }
 `;
 
 const Footer = styled.footer`
   background: #a5d6a7;
   text-align: center;
-  padding: 16px;
   font-size: 1rem;
   color: white;
-  font-family: ${amaticSC.style.fontFamily}, cursive;
-  bottom: 5px;
+  font-family: ${amaticSC.style.fontFamily};
 `;
 const metadata = {
   title: "Ghibli Recipe Book",
@@ -76,12 +110,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <GlobalStyle />
       <body>
-        <Link href={`/`}>
-          <Header>Ghibli Inspired Recipe Book</Header>
-        </Link>
+        <Header role="banner">
+          <Link href="/">Ghibli Inspired Recipe Book</Link>
+        </Header>
         <Container>{children}</Container>
         <Footer>
-          © 2024 Ghibli Movies Inspired Recipes - All rights reserved
+          This is a fan-made project inspired by the films of Studio Ghibli. All
+          trademarks and copyrights belong to their respective owners.
         </Footer>
       </body>
     </html>

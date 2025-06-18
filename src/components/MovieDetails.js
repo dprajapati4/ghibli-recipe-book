@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import foodData from "../data/ghili_data.json";
+import { FoodItem } from "./FoodItem";
 
 const MovieDetailsCard = styled.div`
   display: flex;
@@ -52,9 +54,17 @@ const MovieDescription = styled.p`
   padding: 0;
   max-width: 350px;
 `;
+const FoodList = styled.div`
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 20px;
+`;
 
 const MovieDetails = ({ movie }) => {
-  // TODO:destructure items from movie
+  const matchingFoodEntry = foodData.find(
+    (entry) => entry.movie === movie.title
+  );
+  const foods = matchingFoodEntry?.foods || [];
 
   return (
     <MovieDetailsCard>
@@ -66,6 +76,16 @@ const MovieDetails = ({ movie }) => {
           <MovieDescription>{movie.description}</MovieDescription>
         </MovieDetailsContainer>
       </MovieDetailsContainer>
+      {foods && (
+        <FoodList>
+          <h2 style={{ textAlign: "center", marginBottom: "10px" }}>
+            Featured Foods
+          </h2>
+          {foods.map((food, index) => (
+            <FoodItem food={food} key={index} />
+          ))}
+        </FoodList>
+      )}
     </MovieDetailsCard>
   );
 };

@@ -45,7 +45,6 @@ const MovieTitle = styled.h3`
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
-
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -65,7 +64,7 @@ const MovieList = () => {
 
     getMovies();
   }, []);
-// TODO: Make a cute loading spinner and error
+  // TODO: Make a cute loading spinner and error
   if (error) {
     return <p>{error}</p>;
   }
@@ -78,7 +77,7 @@ const MovieList = () => {
       {movies.map((movie) => (
         <Link key={movie.id} href={`/movie/${movie.id}`}>
           <MovieCard>
-            <MovieImage src={movie.image} alt={movie.title} />
+            <MovieImage src={movie.image} alt={movie.title} loading="lazy" />
             <MovieTitle>{movie.title}</MovieTitle>
           </MovieCard>
         </Link>
