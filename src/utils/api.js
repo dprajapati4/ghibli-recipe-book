@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GHIBLI_API_URL, FOODS_DB } from "../lib/constants";
+import { GHIBLI_API_URL} from "../lib/constants";
 
 export const fetchGhibliMovies = async () => {
   const endpoint = "/films";
@@ -33,18 +33,11 @@ export const fetchGhibliMovieById = async (id) => {
   }
 };
 
-export const fetchFoodsByMovieId = async (id) => {
-  // const endpoint = `/films/${id}`;
-  // const url = GHIBLI_API_URL + endpoint;
-  try {
-    // const res = await axios.get(url);
-    // if (!res.data) {
-    //   throw new Error(`Error with status ${res.status}`);
-    // }
-    const ghibliFoodByData = res.data;
-    return ghibliMovieData;
-  } catch (error) {
-    console.log("Error fetching Ghibli Movie data", error);
-    return null;
-  }
+const formatMovieName = (movieName) => {
+  return movieName
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 };
+
