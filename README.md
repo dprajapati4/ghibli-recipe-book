@@ -2,25 +2,26 @@
 
 A magical collection of recipes inspired by the beautiful food scenes from Studio Ghibli films. From Howl's bacon and eggs to Spirited Away's feast, bring the enchanting flavors of Studio Ghibli into your own kitchen.
 
-<p align="center">
-  <img src="./public/assets/hompage.png" alt="Ghibli Recipe Book Homepage" width="600">
-</p>
+## 📸 Screenshots
 
-<p align="center">
-  <img src="./public/assets/moviepage.png" alt="Movie Recipe Detail Page" width="600">
-</p>
+### Homepage
 
-## ✨ Features
+<div align="center">
+  <img src="./public/assets/hompage.png" alt="Ghibli Recipe Book Homepage" width="800">
+  <p><em>Browse recipes by your favorite Studio Ghibli movies</em></p>
+</div>
 
-- **Movie-Based Recipe Collections**: Browse recipes organized by your favorite Ghibli films
-- **Beautiful Design**: Clean, whimsical interface that captures the Studio Ghibli aesthetic
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Easy Navigation**: Simple, intuitive browsing experience
+### Movie Recipe Collection
+
+<div align="center">
+  <img src="./public/assets/moviepage.png" alt="Movie Recipe Detail Page" width="800">
+  <p><em>Detailed recipe collections for each Ghibli film</em></p>
+</div>
+
 
 ## 🎬 Featured Movies
 
 Discover recipes inspired by iconic Ghibli films including:
-
 - My Neighbor Totoro
 - Spirited Away
 - Howl's Moving Castle
@@ -32,28 +33,26 @@ Discover recipes inspired by iconic Ghibli films including:
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/), [React](https://reactjs.org/)
-- **Styling**: [Styled Components](https://styled-components.com/)
+- **Styling**: [Styled Components](https://styled-components.com/) 
 - **Language**: JavaScript
-- **API**: [Studio Ghibli API](https://ghibliapi.vercel.app/)
+- **API**: [Studio Ghibli API](https://ghibliapi.vercel.app/) 
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 18+ 
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
-
 ```bash
 git clone https://github.com/yourusername/ghibli-recipe-book.git
 cd ghibli-recipe-book
 ```
 
 2. Install dependencies
-
 ```bash
 npm install
 # or
@@ -61,7 +60,6 @@ yarn install
 ```
 
 3. Run the development server
-
 ```bash
 npm run dev
 # or
@@ -70,7 +68,7 @@ yarn dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-5. Enjoy exploring Ghibli-inspired recipes!``
+5. Enjoy exploring Ghibli-inspired recipes!
 
 ## 📝 License
 
@@ -84,17 +82,9 @@ This is a fan-made project created out of love for Studio Ghibli films. All movi
 
 - **Studio Ghibli** for creating the magical worlds that inspire us
 - **Hayao Miyazaki** and all the talented artists behind these incredible films
-- The [Studio Ghibli API](https://ghibliapi.vercel.app/) for providing access to movie data.
+- The  [Studio Ghibli API](https://ghibliapi.vercel.app/) for providing access to movie data.
 
-## 📞 Contact
 
-Have a recipe suggestion or found a bug? Feel free to:
-
-- Open an issue on GitHub
-- Submit a pull request
-
----
-
-_"A heart's a heavy burden."_ - Howl's Moving Castle
-
-Made with 💚 by fans, for fans
+## 📞 Connect with me
+[LinkedIn](https://www.linkedin.com/in/deepprajapati) -
+[Github](https://github.com/dprajapati4/)
